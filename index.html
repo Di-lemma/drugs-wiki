@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>drugs.wiki</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-a" aria-hidden="true"></div>
+    <div class="ambient ambient-b" aria-hidden="true"></div>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <p class="eyebrow">Reference</p>
+          <h1><span class="brand-icon">✦</span>drugs.wiki</h1>
+          <p class="brand-copy">
+            Pharmacology, harm reduction, timing, and dosage data.
+          </p>
+          <p class="brand-attribution">
+            Drug data by
+            <a href="https://raw.githubusercontent.com/Di-lemma/drugs/" target="_blank" rel="noreferrer">Dilemma</a>
+          </p>
+        </div>
+
+        <label class="search-field" for="drug-search">
+          <span><span class="label-icon">⌕</span>Find a drug</span>
+          <input
+            id="drug-search"
+            type="search"
+            placeholder="Search names, aliases, classes"
+            autocomplete="off"
+          />
+        </label>
+
+        <div class="sidebar-meta">
+          <span id="drug-count">0 entries</span>
+          <span id="result-count">0 shown</span>
+        </div>
+
+        <nav id="drug-list" class="drug-list" aria-label="Drug index"></nav>
+      </aside>
+
+      <main class="content">
+        <div id="loading-state" class="loading-state">Loading data…</div>
+        <article id="drug-page" class="drug-page" hidden></article>
+      </main>
+    </div>
+
+    <template id="empty-state-template">
+      <section class="empty-state panel">
+        <p class="eyebrow">No match</p>
+        <h2>No entries found</h2>
+        <p>Try a broader search term or select a drug from the index.</p>
+      </section>
+    </template>
+
+    <script src="./drugs-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
