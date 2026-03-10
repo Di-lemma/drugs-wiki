@@ -28,7 +28,7 @@ A static site for structured harm reduction and pharmacology data.
 
 ## Data
 
-The database lives in [`drugs.json`](link) (or is embedded as `drugs-data.js`), using a consistent JSON schema.
+The database lives in [`drugs.json`](https://github.com/Di-lemma/drugs) (or is embedded as `drugs-data.js`), using a consistent JSON schema.
 
 Example:
 
